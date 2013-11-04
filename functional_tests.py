@@ -2,21 +2,26 @@ from selenium import webdriver
 import unittest
 
 class NewVisitorTest(unittest.TestCase):
+    def setUp(self):
+        self.browser =  webdriver.Firefox()
+        self.browser.implicitly_wait(3)
 
+    def tearDown(self):
+        self.browser.quit()
 
-browser = webdriver.Firefox()
+    def test_can_start_a_list_and_retrieve_it_later(self):
+        # Magenta has heard about a cool new online to-do app. She goes
+        # to check out its homepage
+        self.browser.get('http://localhost:8000')
 
-# Magenta has heard about a cool new online to-do app. She goes
-# to check out its homepage
-browser.get('http://localhost:8000')
+        # She notices the page title and header mention to-do lists
+        self.assertIn('To-Do', self.browser.title)
+        self.fail('Finish the test!')
 
-# She notices the page title and header mention to-do lists
-assert 'To-Do' in browser.title
+        # She is invited to enter a to-do item straight away
 
-# She is invited to enter a to-do item straight away
-
-# She types "Nag for food" into a text box (Magaenta is a cat.
-# She likes to be annoying.)
+        # She types "Nag for food" into a text box (Magaenta is a cat.
+        # She likes to be annoying.)
 
 # When she hits enter, the page updates, and now the page lists
 # "1: Nag for food" as an item in a to-do list
@@ -34,4 +39,5 @@ assert 'To-Do' in browser.title
 
 # Satisfied, she goes back to sleep
 
-browser.quit()
+if __name__ == '__main__':
+    unittest.main(warnings='ignore')
