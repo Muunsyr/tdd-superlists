@@ -23,21 +23,21 @@ class NewVisitorTest(unittest.TestCase):
         # She types "Nag for food" into a text box (Magaenta is a cat.
         # She likes to be annoying.)
 
-# When she hits enter, the page updates, and now the page lists
-# "1: Nag for food" as an item in a to-do list
+        # When she hits enter, the page updates, and now the page lists
+        # "1: Nag for food" as an item in a to-do list
 
-# There is still a text box inviting her to add another item. She
-# enters "Eat some of the food given too me" (Magenta is very methodical)
+        # There is still a text box inviting her to add another item. She
+        # enters "Eat some of the food given too me" (Magenta is very methodical)
 
-# The page updates again, and now shows both items on her list
+        # The page updates again, and now shows both items on her list
 
-# Magenta wonders whether the site will remember her list. Then she sees
-# that the site has generated a unique URL for her -- there is some
-# explanatory text to that effect.
+        # Magenta wonders whether the site will remember her list. Then she sees
+        # that the site has generated a unique URL for her -- there is some
+        # explanatory text to that effect.
 
-# She visits that URL - her to-do list is still there.
+        # She visits that URL - her to-do list is still there.
 
-# Satisfied, she goes back to sleep
+        # Satisfied, she goes back to sleep
 
 if __name__ == '__main__':
     unittest.main(warnings='ignore')
